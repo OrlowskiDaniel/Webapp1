@@ -41,7 +41,7 @@
                 <p>tel. +31 32 732 24 89</p>
                 <p>restaurnt@emailaddres.nl</p>
             </div>
-            <form name="contact" action="./dbcalls/add-to-reservation.php" method="post">
+            <form name="contact" action="admin-message.php" method="post">
                 <p>First and Last name (required) <br><input type="text" name="name" required></p>
                 <p>E-mail addres (required) <br><input type="text" name="mail" required></p>
                 <p>Telephone number (required) <br><input type="text" name="number" required></p>

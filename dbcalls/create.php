@@ -1,4 +1,3 @@
-<h1>create</h1>
 <?php
 
 include("./conn.php");

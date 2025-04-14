@@ -18,6 +18,7 @@ if(isset($_SESSION['username']))
         <?php include('./includes/admin-bar.php') ?>
         <div class="add-product-warpper">
             <div class="add-product-form">
+                <h2>Add Product to menu</h2>
                 <!--add category field, add description field, add img field -->
                 <form class="add-form" action="./dbcalls/create.php" method="post">
                     <label for="">Type here the name of the dish:</label><br>
@@ -37,7 +38,7 @@ if(isset($_SESSION['username']))
                 </form>
             </div>
             <div class="list-of-products">
-                
+                <h2>List of products</h2>
                 
             </div>
 
