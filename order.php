@@ -19,8 +19,10 @@
             <div class="menunav">
                 <form action="dbcalls/search.php" methode="GET">
                     <input class="search-bar" type="text" placeholder="Search.." name="searchresult">
-                    <button type="sumbit" value="search"></button>
+                    <button type="sumbit" value="search" name="search"></button>
                 </form>
+                
+                
             </div>
             <div class="category-wrapper">
                 <img class="arrow" src="./assets/img/arrow_left.svg" alt="arrow">
@@ -54,9 +56,15 @@
                             // echo '<div class="product-description-mobile"><a herf="#" onclick="hideDescription()">Close</a> '. $value['Productdescription'] .' </div>';
                             echo '</div>';
 
-                            echo '<div>';
+                            echo '<div class="product-image-button">';
                             echo '<img class ="food-img" src="./assets/img/'. $value['img'] .'"/>';
-                            echo '<img class ="add-button" src="./assets/img/Frame.svg"/>';
+
+                            echo '<form class="add-form-basket" action="./dbcalls/add-to-besket.php" method="post">';
+                            echo '<input type="hidden" name="Productname" value=" '. $value['Productname'] . '"/>';
+                            echo '<input type="hidden" name="Price" value=" '. $value['Price'] . '"/>';
+                            echo '<input type="image" src="./assets/img/Frame.svg" alt="Submit" width="80" height="80">';
+                            echo '</form>';
+
                             echo '</div>';
 
                             echo '</div>';
@@ -67,16 +75,28 @@
                 ?>
             </div>
         </div>
-
+            
         <div class="basket">
             <div class="basket-list-wrapper">
                 <div class="basket-titel">Basket</div>
-                <div class="text-order-list">Order List</div>
-                <div class="order-list">
-                    <ul>
+                <div class="text-basket-list">Order List</div>
+                <div class="basket-list">
+                    <?php 
+                    include('./dbcalls/read-basket.php');
+                    foreach ($result as $key => $value) {
+                        echo '<div class="basket-item">';
+                        echo '<p> - ' . $value['product'] . '</p>';
+                        echo '<form action="./dbcalls/delete-basket.php" method="post" class="delete-basket">';
+                        echo '<input type="hidden" name="ID" value="' . $value['id'] .'">';
+                        echo '<input type="image" src="./assets/img/cancel.svg" alt="Submit" fill="black" color="black" width="30" height="30">';
+                        echo '</form>';
+                        echo '<p> € ' . $value['price'] . '</p>';
+                        echo '</div>';
+                    }
+                    ?>
+                    
 
-                    </ul>
-                    <p><strong>Total:</strong> €<span id="total">0</span></p>
+                    <!-- <p><strong>Total:</strong> €<span id="total">0</span></p> -->
                 </div>
 
 

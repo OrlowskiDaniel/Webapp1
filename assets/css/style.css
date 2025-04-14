@@ -71,13 +71,18 @@ nav a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 100vw;
+    background-image: url("../img/home-page-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 80vh;
+    gap: 50px;
+    padding: 100px 0;
 }
 .welcome-titel {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: whitesmoke;
     gap: 30px;
 }
 .welcome-titel h2 {
@@ -98,7 +103,8 @@ nav a {
     background-color: whitesmoke;
 }
 .welcome-text {
-
+    padding: 15px;
+    box-shadow: inset 0 0 0 black, 300px 40px 2px green;
 }
 
 
@@ -185,12 +191,20 @@ nav a {
     display: none;
 }
     */
+.product-image-button{
+    display: flex;
+    flex-direction: row;
+}
 .food-img {
     height: 100%;
     width: 150px;
 }
-.add-button {
+.add-form-basket {
     align-self: flex-end;
+}
+.add-form-besket {
+    display: flex;
+    
 }
 .basket {
     width: 20%;
@@ -211,17 +225,16 @@ nav a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     
 }
-
 .basket-titel {
     color: #B78D4C;
     font-size: 30px;
     font-weight: 900;
     
 }
-.text-order-list {
+.text-basket-list {
     color: black;
     border: 5px black solid;
     border-radius: 15px;
@@ -229,14 +242,26 @@ nav a {
     text-align: center;
     
 }
-.order-list {
+.basket-list {
     height: 65vh;
     width: 100%;
     background-color: rgb(218, 218, 218);
     border-radius: 10px;
 }
-.order-list ul {
-    list-style: none;
+.basket-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 0;
+    border-bottom: 2px;
+    border-color: #B78D4C;;
+    border-style: solid;
+}
+.delete-basket {
+    display: flex;
+    align-items: center;
+    
 }
 .check-out-button {
     text-decoration: none;
@@ -334,10 +359,6 @@ footer h3 {
 }
 
 
-.admin-add {
-    display: flex;
-    width: 100%;
-}
 .admin-side-bar {
     width: 20%;
     border: 2px blue solid;
@@ -364,6 +385,40 @@ footer h3 {
     background-color: rgba(243, 78, 78, 0.793);
 }
 
+/*
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+.contact-form form p input {
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    font-size: 17px;
+}
+*/
+
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add-form label {
+    align-self: flex-start;
+}
+.admin-add {
+    display: flex;
+    width: 100%;
+}
 .add-product-warpper {
     display: flex;
     justify-content: space-around;
@@ -375,6 +430,19 @@ footer h3 {
     border: 2px red solid;
 
 }
+.add-product-form input {
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    
+}
+.add-product-button {
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgba(243, 78, 78, 1);
+}
+
+
 
 .admin-menu-items {
     height: 150px;
@@ -386,23 +454,6 @@ footer h3 {
 .edit-items-box {
     display: flex;
     
-}
-.add-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.product-to-add {
-    width: 45%;
-    height: 100vh;
-    border: 2px yellow solid;
-}
-.add-product-button {
-    width: 120px;
-    height: 45px;
-    font-weight: 700;
-    border-radius: 10px;
-    background-color: rgba(243, 78, 78, 1);
 }
 .update-form {
     display: flex;

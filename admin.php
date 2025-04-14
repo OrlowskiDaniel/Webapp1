@@ -26,17 +26,17 @@ if(isset($_SESSION['username']))
                     <label for="">Type here the price of the dish:</label><br>
                     <input type="text" name="price"> 
                     <br>
-                    <label for="">Type here the price of the dish:</label><br>
-                    <input type="text" name="price"> 
+                    <label for="">Type here the description of the dish:</label><br>
+                    <input type="text" name="description"> 
                     <br>
-                    <label for="">Type here the price of the dish:</label><br>
-                    <input type="text" name="price"> 
+                    <label for="">Type here the img of the dish:</label><br>
+                    <input type="text" name="img"> 
                     <br>
                     
-                    <input class="add-product-button" type="submit">
+                    <input class="add-product-button" type="submit" value="Add Product">
                 </form>
             </div>
-            <div class="product-to-add">
+            <div class="list-of-products">
                 
                 
             </div>
