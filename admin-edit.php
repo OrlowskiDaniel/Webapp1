@@ -25,9 +25,9 @@
                 ?>
                 <!-- add category and description, make the form bigger -->
                 <form action="./dbcalls/update.php" method="post" class="update-form">
-                    <input type="text" class="update-field" name="productnaam" id="" value="<?php echo $value['Productname']; ?>">
-                    <input type="text" class="update-field" name="Prijs" id="" value="<?php echo $value['Price']; ?>">
-                    <input type="text" class="update-field" name="img" id="" value="<?php echo $value['img']; ?>">
+                    <input type="text" class="update-field" name="productname" id="" value="<?php echo $value['Productname']; ?>">
+                    <input type="text" class="update-field" name="price" id="" value="<?php echo $value['Price']; ?>">
+                    <input type="text" class="update-field" name="description" id="" value="<?php echo $value['Productdescription']; ?>">
                     <button type="submit" class="edit-button update-button">Update</button>
                 </form>
                 <?php

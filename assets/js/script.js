@@ -17,22 +17,3 @@ function hideDescription() {
 }
 
 
-
-document.addEventListener("DOMContentLoaded", () => {
-    const basket = document.querySelector(".basket");
-    const footer = document.querySelector("footer");
-    
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                basket.classList.add("hidden-basket");
-            } else {
-                basket.classList.remove("hidden-basket");
-            }
-        });
-    }, { threshold: 0.1 });
-
-    observer.observe(footer);
-    
-});

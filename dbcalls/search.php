@@ -12,4 +12,4 @@ $stmt->execute();
 
 $result = $stmt->fetchAll();
 
-header('Location: ../order.php');
+var_dump($result);

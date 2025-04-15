@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Times New Roman', serif;
 }
 header {
     width: 100%;
@@ -213,6 +214,7 @@ nav a {
     right: 0;
     padding: 5px 30px;
     
+    
 }
 .basket-full-screen {
     height: 100vh;
@@ -262,6 +264,7 @@ nav a {
 .delete-basket {
     display: flex;
     align-items: center;
+
     
 }
 .check-out-button {
@@ -362,7 +365,7 @@ footer h3 {
 
 .admin-side-bar {
     width: 20%;
-    border: 2px blue solid;
+    
 }
 .admin-side-bar ul {
     width: 100%;
@@ -378,7 +381,7 @@ footer h3 {
     display: flex;
     align-items: center;
     color: black;
-    border: 2px purple solid;
+    border: 2px black solid;
 }
 .log-out-button {
     width: 100%;
@@ -418,7 +421,7 @@ footer h3 {
 .add-product-form {
     width: 45%;
     height: 100vh;
-    border: 2px red solid;
+    
 
 }
 .add-form {
@@ -426,6 +429,7 @@ footer h3 {
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    border: 2px solid black;
 }
 .add-form label {
     align-self: flex-start;

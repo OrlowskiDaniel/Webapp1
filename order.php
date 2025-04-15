@@ -82,6 +82,7 @@
                 <div class="text-basket-list">Order List</div>
                 <div class="basket-list">
                     <?php 
+                    $total = 0;
                     include('./dbcalls/read-basket.php');
                     foreach ($result as $key => $value) {
                         echo '<div class="basket-item">';
@@ -92,6 +93,7 @@
                         echo '</form>';
                         echo '<p> € ' . $value['price'] . '</p>';
                         echo '</div>';
+                        $total = $total + $value['price'];
                     }
                     ?>
                     
