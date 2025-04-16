@@ -6,7 +6,7 @@
             <p>Something 1 street</p>
             <p>Postcode</p>
             <p>tel. 30 434 38 24</p>
-            <p>restaurnt@emailaddres.nl</p>
+            <p>restaurant@emailaddres.nl</p>
         </div>
         
         <div class="opening-hours">

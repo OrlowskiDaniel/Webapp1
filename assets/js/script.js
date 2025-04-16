@@ -16,3 +16,11 @@ function hideDescription() {
     description.style.display = "none"
 }
 
+function showBasket() {
+    const description = document.querySelector(".basket")
+    description.style.display = "flex"
+}
+function hideBasket() {
+    const description = document.querySelector(".basket")
+    description.style.display = "none"
+}

@@ -13,7 +13,6 @@
     <div class="reservation">
         <h2>Reservations</h2>
         <div class="all-reservations-box">
-<!--Always add new box save in database -->
         <?php 
             // if (isset($_POST['send']))
             include('./dbcalls/read-reservations.php');

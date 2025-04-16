@@ -23,7 +23,7 @@
                 echo '<br> ' . $value['Productdescription'];
                 echo '</div>';
                 ?>
-                <!-- add category and description, make the form bigger -->
+                <!-- add category and make the form bigger -->
                 <form action="./dbcalls/update.php" method="post" class="update-form">
                     <input type="hidden" name="ID" value="<?php echo $value['ID']; ?>">
                     <input type="text" class="update-field" name="productname" id="" value="<?php echo $value['Productname']; ?>">

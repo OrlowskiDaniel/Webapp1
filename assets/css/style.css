@@ -16,9 +16,9 @@ header {
 }
 .logo a {
     text-decoration: none;
-    color: white;
+    color: rgb(245, 211, 160);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
 }
 nav ul {
     width: 100%;
@@ -37,7 +37,9 @@ nav a {
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    color: rgb(214, 177, 122);
     
 }
 
@@ -53,6 +55,7 @@ nav a {
     align-items: flex-start;
     justify-content: flex-start;
     backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.558);
     
 }
 .sidebar li {
@@ -60,6 +63,8 @@ nav a {
 }
 .sidebar a {
     width: 100%;
+    font-size: 23px;
+    color: rgb(255, 197, 111);
 }
 .menu-button {
     display: none;
@@ -75,7 +80,7 @@ nav a {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/home-page-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     gap: 50px;
     padding: 100px 0;
 }
@@ -100,13 +105,14 @@ nav a {
     font-weight: 800;
 }
 .welcome-text-container {
-    width: 350px;
-    height: 500px;
+    width: 400px;
     background-color: whitesmoke;
 }
 .welcome-text {
+    font-size: 20px;
+    font-weight: 700;
     padding: 15px;
-    box-shadow: inset 0 0 0 black, 300px 40px 2px green;
+    box-shadow: inset 0 0 5px black, 300px 40px 5px  green;
 }
 
 
@@ -115,7 +121,7 @@ nav a {
     flex-direction: row;
     justify-content: start;
     width: 100%;
-    
+    min-height: 100vh;
     gap: 40px;
 }
 .search-bar {
@@ -445,6 +451,9 @@ footer h3 {
     font-weight: 700;
     border-radius: 10px;
     background-color: rgba(243, 78, 78, 1);
+}
+.admin-add-list-items {
+    
 }
 
 

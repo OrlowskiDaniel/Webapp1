@@ -12,6 +12,15 @@ $hour = $_POST['hour'];
 $comment = $_POST['comment'];
 
 
+if (
+    is_string($name) &&
+    filter_var($mail, FILTER_VALIDATE_EMAIL) &&
+    is_numeric($person) && $person > 0 &&
+    is_string($date) &&
+    is_string($hour) &&
+    is_string($comment)
+) {
+
 $sql = 'INSERT INTO reservation(name, mail, number, person, date, hour, comment) VALUES (:name, :mail, :number, :person, :date, :hour, :comment);';
 
 $stmt = $conn->prepare($sql);
@@ -23,6 +32,11 @@ $stmt->bindParam(":hour", $hour);
 $stmt->bindParam(":date", $date);
 $stmt->bindParam(":comment", $comment);
 $stmt->execute();
-
 header('Location: ../contact.php');
+} else {
+    echo 'Invalid input!';
+}
+
+
+
 

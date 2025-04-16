@@ -20,7 +20,7 @@
                 <br>
                 <p>Be sure to visit Silesian Prohibition! We are open again and invite you to take part in our culinary adventure. We serve dishes from our new menu in which you will find both favorite Silesian classics as well as plenty of novelties. Start your journey with a perfectly composed appetizer, then move on to the real feast. Top it all off with a sweet dessert prepared especially for you.</p>
             </div>
-            <div class="shdaow-box"></div>
+            
         </div>
         
         

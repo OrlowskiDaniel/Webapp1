@@ -1,6 +1,7 @@
 <?php
 include("conn.php");
 
+
 if (isset($_GET['search']) && !empty($_GET['searchresult'])) {
     $searchResult = $_GET["searchresult"];
     $search = '%' . $searchResult . '%';
@@ -10,5 +11,5 @@ if (isset($_GET['search']) && !empty($_GET['searchresult'])) {
     $stmt->execute();
     $result = $stmt->fetchAll();
 } else {  
-    include('read.php'); // this sets $result with all products
+    include('read.php'); // $result with all products
 }

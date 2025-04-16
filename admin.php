@@ -21,38 +21,61 @@ if(isset($_SESSION['username']))
                 <h2>Add Product to menu</h2>
                 <!--add category field, add description field, add img field -->
                 <form class="add-form" action="./dbcalls/create.php" method="post">
-                    <label for="">Type here the name of the dish:</label><br>
+                    <label for="">Name of the dish:</label><br>
                     <input type="text" name="dish" id="1">
                     <br>
-                    <label for="">Type here the price of the dish:</label><br>
+                    <label for="">Price of the dish:</label><br>
                     <input type="text" name="price"> 
                     <br>
-                    <label for="">Type here the description of the dish:</label><br>
+                    <label for="">Description of the dish:</label><br>
                     <input type="text" name="description"> 
-                    <br>
-                    <label for="">Type here the img of the dish:</label><br>
+                    <!-- <br>
+                    <label for="">Img of the dish:</label><br>
                     <input type="text" name="img"> 
-                    <br>
+                    -->
+                    <br> 
                     
                     <input class="add-product-button" type="submit" value="Add Product">
                 </form>
             </div>
             <div class="list-of-products">
                 <h2>List of products</h2>
+                <?php 
+                include('./dbcalls/read.php');
+
                 
+                    foreach ($result as $key => $value) {
+                        
+                            echo '<div class="box-for-menu-items admin-add-list-items">';
+
+                            echo '<div class="product-text">';
+                            echo '<p>' . $value['Productname'] . '</p>';
+                            echo '<p>€ ' . $value['Price'] . '</p>';
+                            // echo '<p class"product-description hideOnMobile"> ' . $value['Productdescription'] . '</p>';
+                            // echo '<a herf="#" onclick="showDescription()">Show description</a>';
+                            // echo '<div class="product-description-mobile"><a herf="#" onclick="hideDescription()">Close</a> '. $value['Productdescription'] .' </div>';
+                            echo '</div>';
+
+                            echo '<img class ="food-img" src="./assets/img/'. $value['img'] .'"/>';
+
+                            
+
+                            echo '</div>';
+                        
+                    }
+                
+                ?>
             </div>
 
         </div>
     </section>
 </body>
-
-
+<?php 
+}
+    else {
+        header('Location: ./contact.php');
+    
+    }
+?>
 
 </html>
-<?php
-}
-else {
-    header('Location: ./contact.php');
-
-}
-?>
