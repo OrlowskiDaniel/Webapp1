@@ -11,15 +11,6 @@ $date = $_POST['date'];
 $hour = $_POST['hour'];
 $comment = $_POST['comment'];
 
-echo '<br>this is my product: ',$name, ' <<<< <br>';
-echo '<br>this is my product: ',$mail, ' <<<< <br>';
-echo '<br>this is my product: ',$number, ' <<<< <br>';
-echo '<br>this is my product: ',$person, ' <<<< <br>';
-echo '<br>this is my product: ',$date, ' <<<< <br>';
-echo '<br>this is my product: ',$hour, ' <<<< <br>';
-echo '<br>this is my product: ',$comment, ' <<<< <br>';
-
-
 
 $sql = 'INSERT INTO reservation(name, mail, number, person, date, hour, comment) VALUES (:name, :mail, :number, :person, :date, :hour, :comment);';
 

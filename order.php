@@ -17,11 +17,10 @@
     <div class="order">
         <div class="menu-wrapper">
             <div class="menunav">
-                <form action="dbcalls/search.php" methode="GET">
+                <form action="order.php" method="GET">
                     <input class="search-bar" type="text" placeholder="Search.." name="searchresult">
-                    <button type="sumbit" value="search" name="search"></button>
+                    <button type="submit" value="search" name="search"></button>
                 </form>
-                
                 
             </div>
             <div class="category-wrapper">
@@ -39,9 +38,10 @@
             </div>
 
             <div class="menu">
+                
+                <?php          
+                include('./dbcalls/search.php');
 
-                <?php
-                include('./dbcalls/read.php');
                 foreach ($category as $item) {
                     echo '<h1 id="' . $item['CategoryName'] . '"> ' . $item['CategoryName'] . '</h1>';
                     foreach ($result as $key => $value) {

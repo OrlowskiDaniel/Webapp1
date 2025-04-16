@@ -14,7 +14,7 @@
             <form method="post" action="./dbcalls/checklogin.php" class="login-form">
                 <input type="text" name="username" class="login-form-input">
                 <div class="form-line"></div>
-                <input type="text" name="password" class="login-form-input">
+                <input type="password" name="password" class="login-form-input">
                 <div class="form-line"></div>
                 <input type="submit" value="Login" class="login-form-submit">
             </form>

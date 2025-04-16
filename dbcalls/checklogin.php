@@ -1,27 +1,29 @@
 
 <?php
 include('./conn.php');
+session_start();
 
 
-$stmt = $conn->prepare("SELECT * FROM users WHERE username = :username AND password = :password;");
-$stmt->bindParam(":username", $_POST['username']);
-$stmt->bindParam(":password", $_POST['password']);
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+
+$stmt = $conn->prepare("SELECT * FROM users WHERE username = :username;");
+$stmt->bindParam(":username", $username);
 $stmt->execute();
 $result = $stmt->fetch();
 
-session_start();
 
-if ($result) {
+if ($result && password_verify($password, $result['password'])) {
 
     $_SESSION['username'] = $result['username'];
-    echo 'you are loged in';
+    
     header('Location: ../admin.php');
+    exit();
 }
 else {
     header('Location: ../login.php');
-    
-    
-    
+    exit();
 }
 
 

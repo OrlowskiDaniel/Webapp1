@@ -16,4 +16,3 @@ function hideDescription() {
     description.style.display = "none"
 }
 
-

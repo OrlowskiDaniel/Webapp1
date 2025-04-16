@@ -201,6 +201,8 @@ nav a {
     height: 100%;
     width: 150px;
 }
+
+
 .add-form-basket {
     align-self: flex-end;
 }
@@ -216,20 +218,15 @@ nav a {
     
     
 }
-.basket-full-screen {
-    height: 100vh;
-}
-.hidden-basket {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
+.small-basket {
+    
 }
 .basket-list-wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    
+    height: 100%;
 }
 .basket-titel {
     color: #B78D4C;
@@ -335,6 +332,8 @@ nav a {
 
 footer {
     background-color: rgb(21, 21, 21);
+    position: relative;
+    z-index: 2;
 }
 .footer-content {
     display: flex;
@@ -451,7 +450,7 @@ footer h3 {
 
 
 .admin-menu-items {
-    height: 150px;
+    height: 200px;
     margin: 20px 0;
 }
 .admin-items {
@@ -466,7 +465,7 @@ footer h3 {
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    
+    margin-right: 20px;
 }
 .detele-admin {
     display: flex;
@@ -493,7 +492,8 @@ footer h3 {
     
 }
 .update-field {
-    width: 160%;
+    width: 500px;
+    height: 35px;
 }
 .update-button {
     background-color: yellow;

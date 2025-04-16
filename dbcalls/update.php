@@ -7,7 +7,7 @@ $prijs = $_POST['price'];
 $description = $_POST['description'];
 $id = $_POST['ID'];
 
-$sql = 'UPDATE menuitems SET Productname = :productname, Price = :price, Productdescription = :description WHERE ID = :ID;';
+$sql = 'UPDATE menuitems SET Productname = :productname, Price = :price, Productdescription = :description WHERE ID = :ID';
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(":productname", $productnaam );
 $stmt->bindParam(":price", $prijs );

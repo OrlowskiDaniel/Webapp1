@@ -1,15 +1,14 @@
 <?php
 include("conn.php");
 
-$searchResult = $_GET["searchresult"];
+if (isset($_GET['search']) && !empty($_GET['searchresult'])) {
+    $searchResult = $_GET["searchresult"];
+    $search = '%' . $searchResult . '%';
 
-$test = '%' . $searchResult . '%';
-
-$stmt = $conn->prepare("SELECT * FROM menuitems WHERE Productdescription LIKE :productdescription;");
-// $stmt->bindParam(":product", $test);
-$stmt->bindParam(":productdescription", $test);
-$stmt->execute();
-
-$result = $stmt->fetchAll();
-
-var_dump($result);
+    $stmt = $conn->prepare("SELECT * FROM menuitems WHERE Productname LIKE :search OR Productdescription LIKE :search");
+    $stmt->bindParam(":search", $search);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+} else {  
+    include('read.php'); // this sets $result with all products
+}
